@@ -1,0 +1,162 @@
+You are a senior UI/UX designer and Frontend Engineer specializing in Next.js 15, Tailwind CSS, Radix UI, and SEO-optimized web applications.
+
+Design and implement a modern, professional landing page for a cleaning-only service platform (web and mobile). The platform allows users to order verified cleaners from anywhere, regardless of location.
+
+🔹 Core Requirements
+
+The website must communicate clearly and immediately that the platform is strictly for cleaning services
+
+Target audience: households, offices, short-stay apartments, and commercial spaces
+
+Clean, trustworthy, modern, and premium aesthetic
+
+🔹 Tech Stack
+
+Next.js 15 (App Router)
+
+Tailwind CSS
+
+Radix UI
+
+Fully responsive (mobile-first)
+
+SEO-optimized using Next.js best practices
+
+🧱 Page Structure (in this exact order)
+1️⃣ Top Navigation Bar
+
+Logo (cleaning-focused brand)
+
+Navigation links:
+
+Home
+
+Services
+
+Partners
+
+Blog
+
+Contact
+
+CTA button: “Book a Cleaner”
+
+Sticky on scroll
+
+2️⃣ Hero Section
+
+Full-width image carousel (clean homes, offices, professional cleaners at work)
+
+Clear headline (SEO-friendly):
+
+Example: “Professional Cleaning Services, Anytime, Anywhere”
+
+Subheadline that reinforces cleaning-only focus
+
+Two CTA buttons:
+
+Order a Cleaner
+
+Become a Cleaning Partner
+
+3️⃣ About / Description Section
+
+Brief, clear explanation of the platform:
+
+What the service does
+
+Who it is for
+
+Why it’s different (on-demand, location-independent, trusted cleaners)
+
+Include trust-building icons or highlights
+
+4️⃣ Services Section
+
+Card-based layout
+
+Services examples:
+
+Home Cleaning
+
+Office Cleaning
+
+Post-Construction Cleaning
+
+Move-In / Move-Out Cleaning
+
+Deep Cleaning
+
+Use Radix UI components for accessibility
+
+5️⃣ Partners Section
+
+Information for cleaning professionals and companies
+
+Benefits of becoming a partner
+
+CTA: “Join as a Partner”
+
+6️⃣ Blog Section
+
+SEO-focused blog previews
+
+Topics around:
+
+Cleaning tips
+
+Hygiene
+
+Home care
+
+Office cleanliness
+
+Use semantic HTML for SEO
+
+7️⃣ Footer Section
+
+Quick links
+
+Services
+
+Contact information
+
+Social media icons
+
+Copyright
+
+🔍 SEO Requirements
+
+Proper use of:
+
+<h1> for hero headline
+
+<h2> / <h3> for sections
+
+Meta title & description
+
+Structured layout for search engines
+
+Image optimization with Next.js
+
+🎨 Design Guidelines
+
+Minimalist, modern, and professional
+
+Soft shadows, rounded corners
+
+Neutral + fresh colors (white, light gray, soft blues/greens)
+
+Smooth animations and transitions
+
+📦 Output Expected
+
+Component-based structure
+
+Clean, readable Tailwind classes
+
+Ready-to-use Next.js page
+
+Reusable UI components
+
+Do not include unrelated services. The platform must be perceived as 100% cleaning-focused at first glance.

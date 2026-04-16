@@ -1,0 +1,75 @@
+"use client";
+
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import img1 from "./assets/imgs/info-landing-image-1.png";
+import img2 from "./assets/imgs/info-landing-image-2.png";
+import img3 from "./assets/imgs/pending-info-clean-1.png";
+import img4 from "./assets/imgs/hero-home-clean-2.jpg";
+
+const slides = [
+  { src: img1, alt: "Team member cleaning a living room" },
+  { src: img2, alt: "Professional cleaner preparing supplies" },
+  { src: img3, alt: "Cleaner sanitizing surfaces" },
+  { src: img4, alt: "Office cleaning crew at work" },
+];
+
+export default function Intro() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const t = setInterval(() => setIndex((i) => (i + 1) % slides.length), 4500);
+    return () => clearInterval(t);
+  }, []);
+
+  return (
+    <section className="w-full flex justify-center">
+      <div className="container mx-auto md:px-4 lg:px-6 mt-4 md:mt-8 lg:mt-10">
+        <div className="bg-[var(--background-offwhite)] rounded-lg shadow-sm p-8 md:p-12 lg:p-16">
+          <div className="max-w-6xl mx-auto">
+            <div className="mb-6 text-sm text-[var(--text-gray)]">How we care</div>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+              <div className="lg:col-span-7">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text-gray)] leading-tight [word-spacing:0.08rem] md:[word-spacing:0.2rem] lg:[word-spacing:0.32rem]">
+                  Choosing the right cleaning service can feel overwhelming, which is why we're dedicated to making the
+                  process simple, transparent, and tailored to your unique needs.
+                  <br /> <br />
+                  Creating clean and healthy environments is our passion, work with us and find the best cleaners near
+                  you.
+                </h2>
+              </div>
+
+              <div className="lg:col-span-5 flex items-start">
+                <div className="w-full rounded-md overflow-hidden relative" style={{ minHeight: 660 }}>
+                  {slides.map((s, i) => (
+                    <div
+                      key={i}
+                      className={`absolute inset-0 transition-opacity duration-700 ${
+                        i === index ? "opacity-100" : "opacity-0"
+                      }`}
+                    >
+                      <Image src={s.src} alt={s.alt} fill className="object-cover" priority={false} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 text-[var(--text-gray)]">
+              <p>
+                Since our founding, we have focused on consistent, high-quality results for homes and businesses.
+                Whether it’s routine maintenance or one-time deep cleaning, our processes emphasize reliability,
+                professionalism, and respect for your environment.
+              </p>
+              <p>
+                With a dedicated customer success team and rigorous training programs, we ensure every visit meets our
+                exacting standards. Over thousands of satisfied clients, we’ve built a reputation for reliability and
+                discretion.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

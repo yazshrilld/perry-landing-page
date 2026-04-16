@@ -1,0 +1,103 @@
+Services Section (Critical Design Area):
+
+Design a modern, minimal, and visually appealing Services section that highlights exactly five (5) cleaning services.
+
+🔹 Layout Requirements
+
+Use a grid-based layout:
+
+First row: 3 service cards
+
+Second row: 2 service cards
+
+The second-row cards must be perfectly centered horizontally beneath the first row, not left-aligned.
+
+The layout should feel balanced, intentional, and elegant, avoiding awkward empty space.
+
+Fully responsive:
+
+Desktop: 3 → 2 centered layout
+
+Tablet: 2 → 2 → 1
+
+Mobile: 1 column
+
+🧱 Card Design
+
+Each service is displayed as a compact, minimal card (not large or bulky).
+
+Card shape:
+
+Soft rounded corners
+
+Subtle shadow or border
+
+Cards should feel light, clean, and modern.
+
+🧩 Card Content Structure
+
+Each card must follow this structure:
+
+Top Row (Horizontal layout):
+
+Left: Service icon (SVG or image)
+
+Right: Service title (short, clear, bold)
+
+Bottom Row:
+
+Brief service description (1–2 lines max)
+
+This creates a clear icon + title alignment, with the description supporting underneath.
+
+🎨 Visual Style
+
+Use soft, colorful accents per card (light backgrounds, icon colors, or subtle gradients).
+
+Maintain a clean white or neutral base to preserve professionalism.
+
+Avoid heavy borders or aggressive colors.
+
+Cards should look touch-friendly and premium.
+
+✨ Interactions & Polish
+
+Subtle hover effects:
+
+Slight elevation
+
+Soft shadow increase
+
+Gentle color shift
+
+Smooth transitions (150–250ms).
+
+🔍 Content & Clarity
+
+Service names must clearly communicate cleaning-specific services only.
+
+No unrelated services.
+
+The section should immediately reinforce that this platform is 100% dedicated to cleaning.
+
+🧠 Implementation Notes
+
+Use Tailwind CSS grid utilities for layout control.
+
+Use Radix UI where appropriate for accessibility.
+
+Ensure clean component structure and reusability.
+
+Keep the card dimensions consistent across all five services.
+
+The final Services section should feel:
+
+Minimal
+
+Balanced
+
+Colorful but controlled
+
+Premium and modern
+
+Add fumigation services

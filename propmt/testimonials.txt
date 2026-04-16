@@ -1,0 +1,118 @@
+Testimonials Section (High Trust, Editorial Card Layout):
+
+Design a modern testimonials section that highlights real partner or customer feedback in a card-based layout, visually matching a premium SaaS aesthetic.
+
+🔹 Overall Layout
+
+Use a horizontal row of testimonial cards.
+
+Each card should appear as a tall, clean white card with:
+
+Rounded corners
+
+Subtle shadow
+
+Cards should be evenly spaced with generous horizontal gaps.
+
+The section background should be a soft, warm gradient (subtle orange/pink tones) or a very light neutral gradient.
+
+🧱 Card Structure (Exact Order)
+1️⃣ Avatar Area
+
+Small circular avatar image at the top-left of the card.
+
+Avatar should be slightly inset with enough white space around it.
+
+2️⃣ Name & Location
+
+Person’s full name in bold text.
+
+Location (City, Country) in smaller, muted text directly below the name.
+
+3️⃣ Divider
+
+Thin horizontal divider line separating the header from the testimonial content.
+
+4️⃣ Testimonial Content
+
+Testimonial text:
+
+Left-aligned
+
+Medium-length paragraph
+
+Slightly muted text color for readability
+
+Begin testimonial text with an em dash (—) for editorial feel.
+
+5️⃣ Footer Link
+
+Small text link at the bottom:
+
+Example: “Read case study”
+
+Understated and minimal
+
+🎨 Visual Style
+
+Typography should feel:
+
+Calm
+
+Professional
+
+Editorial
+
+Use consistent padding inside each card.
+
+Avoid heavy colors inside the cards themselves.
+
+Let the background gradient provide visual interest, not the card.
+
+✨ Interaction & Motion
+
+On hover:
+
+Slight elevation
+
+Very subtle shadow increase
+
+Smooth transitions only (no aggressive animations).
+
+📱 Responsiveness
+
+Desktop:
+
+3 testimonial cards in a row
+
+Tablet:
+
+2 cards per row
+
+Mobile:
+
+1 card per row
+
+Or horizontal scroll with snap points (optional)
+
+🧠 Implementation Notes
+
+Use Tailwind CSS for layout and spacing.
+
+Use Next.js Image for avatars.
+
+Maintain equal card heights for visual consistency.
+
+Ensure accessible contrast and readable font sizes.
+
+This testimonials section should feel:
+
+Human
+
+Trustworthy
+
+Polished
+
+Premium
+
+Avoid sliders with autoplay. Keep it calm and readable.

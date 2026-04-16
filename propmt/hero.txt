@@ -1,0 +1,78 @@
+Hero & Navigation Visual Treatment (Critical)
+
+The hero section must be full-width and should define the entire top of the page.
+Do not use borders to contain or separate the hero. The hero should rely on width, spacing, and background—not borders—to establish structure.
+
+The hero and top navigation must feel like a single, unified visual block, not two separate sections.
+
+The navigation bar must sit inside the hero background, not on a white header or detached container.
+
+Do not visually separate the navbar from the hero using borders, lines, or background color changes.
+
+The transition from navigation to hero content must be seamless, as if they belong to one continuous section.
+
+Hero Container (Full-Width Priority)
+
+The hero background must span 100% of the viewport width.
+
+Remove all borders entirely.
+
+Use large border-radius only on the outer hero container edges (soft, rounded corners) if needed for polish—not as a boxed or bordered card.
+
+The hero should feel expansive and immersive, not constrained.
+
+Navigation Style
+
+Navigation should be transparent or semi-transparent, allowing the hero background/image to subtly show through.
+
+Navigation text should be light-colored (white or off-white) for strong contrast.
+
+Logo aligned to the left.
+
+Menu items aligned center or right.
+
+Primary CTA button (“Book a Cleaner”) styled as a pill-shaped button with a contrasting background.
+
+Hero Layout & Composition
+
+Hero background should use a full-bleed image carousel across the entire hero width.
+
+Apply a soft dark gradient overlay for text readability.
+
+Hero content should be left-aligned:
+
+Small eyebrow text (short tagline)
+
+Large, bold H1 headline
+
+Supporting subtext below
+
+The headline should feel confident, premium, and authoritative.
+
+CTA Buttons
+
+Place two CTA buttons directly beneath the hero text.
+
+Primary CTA:
+
+Solid background
+
+Fully rounded
+
+Highly prominent
+
+Secondary CTA:
+
+Outline or subtle background
+
+Fully rounded
+
+Buttons should align horizontally on desktop and stack vertically on mobile.
+
+Visual Depth & Polish
+
+Use subtle shadows or elevation to give the hero depth—never borders.
+
+Optional: very light glassmorphism or blur effects (keep extremely subtle).
+
+Avoid sharp edges, harsh lines, or boxed layouts.

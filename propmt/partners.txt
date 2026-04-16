@@ -1,0 +1,101 @@
+Partners Section (Trust & Credibility Focus):
+
+Design a clean, minimal Partners section that showcases the companies and organizations we currently work with.
+
+This section’s primary goal is to build trust instantly, not to dominate attention.
+
+🔹 Section Structure
+
+Place this section after the Services section.
+
+Include:
+
+A small, subtle heading above the logos:
+
+Example: “Trusted by leading companies” or “Our Partners”
+
+A horizontal row of partner logos underneath.
+
+🧱 Logo Layout
+
+Display partner logos in a single horizontal row.
+
+Logos should be:
+
+Evenly spaced
+
+Vertically aligned
+
+Consistent in visual weight
+
+Use a flex or grid layout that automatically adjusts spacing.
+
+🎨 Visual Treatment
+
+Logos should be:
+
+Monochrome (grayscale) by default
+
+Subtle and non-distracting
+
+On hover:
+
+Transition from grayscale to full color
+
+Smooth, gentle animation (no bounce or scale jump)
+
+📐 Sizing & Spacing
+
+Logos must not appear oversized.
+
+Maintain generous horizontal padding so the section feels airy.
+
+Section background should be:
+
+White or very light neutral
+
+No heavy borders
+
+Optional thin divider line above or below
+
+📱 Responsiveness
+
+Desktop:
+
+Single row of logos
+
+Tablet:
+
+Logos wrap gracefully into two rows if needed
+
+Mobile:
+
+Logos wrap into multiple rows or scroll horizontally
+
+✨ Motion & Polish
+
+Subtle fade-in animation on scroll.
+
+Hover effect only on individual logos.
+
+No autoplay sliders unless necessary.
+
+🧠 Implementation Notes
+
+Use Next.js Image optimization for logos.
+
+Use Tailwind CSS for layout and spacing.
+
+Ensure logos have accessible alt text.
+
+This section should feel:
+
+Quietly confident
+
+Professional
+
+Trust-building
+
+Clean and modern
+
+Do not over-decorate or distract from the logos themselves.
