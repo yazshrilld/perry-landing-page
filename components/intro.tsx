@@ -82,7 +82,15 @@ export default function Intro() {
                         i === index ? "opacity-100" : "opacity-0"
                       }`}
                     >
-                      <Image src={s.src} alt={s.alt} fill className="object-cover" priority={false} />
+                      <Image
+                        src={s.src}
+                        alt={s.alt}
+                        fill
+                        sizes="(min-width: 1024px) 50vw, 100vw"
+                        quality={70}
+                        className="object-cover"
+                        priority={false}
+                      />
                     </div>
                   ))}
                 </div>

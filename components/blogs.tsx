@@ -63,7 +63,14 @@ export default function Blogs() {
                 className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200"
               >
                 <div className="relative h-44">
-                  <Image src={p.image} alt={p.title} fill className="object-cover" />
+                  <Image
+                    src={p.image}
+                    alt={p.title}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    quality={65}
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-4">
                   <p className="text-xs text-gray-400">{p.date}</p>

@@ -26,7 +26,15 @@ export default function Hero() {
             key={i}
             className={`absolute inset-0 transition-opacity duration-700 ${i === index ? "opacity-100" : "opacity-0"}`}
           >
-            <Image src={src} alt={`slide-${i + 1}`} fill className="object-cover" priority={i === 0} />
+            <Image
+              src={src}
+              alt={`slide-${i + 1}`}
+              fill
+              sizes="100vw"
+              quality={70}
+              className="object-cover"
+              priority={i === 0}
+            />
             <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/50" />
           </div>
         ))}
