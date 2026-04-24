@@ -70,7 +70,10 @@ export default function Blogs() {
                   <h3 className="mt-2 text-lg font-semibold text-[var(--brand-charcoal)]">{p.title}</h3>
                   <p className="mt-2 text-sm text-gray-600">{p.excerpt}</p>
                   <div className="mt-4">
-                    <a href={p.href} className="text-sm text-[var(--brand-charcoal)] hover:underline">
+                    <a
+                      href={p.href}
+                      className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--brand-primary)] text-white text-sm hover:brightness-95 transition"
+                    >
                       Read more →
                     </a>
                   </div>

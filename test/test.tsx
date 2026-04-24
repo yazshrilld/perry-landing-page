@@ -40,7 +40,7 @@ export default function Intro() {
 
                 <div className="mt-8 space-y-5 text-[var(--text-gray)]">
                   <div className="flex gap-4">
-                    <div className="mt-1 h-10 w-10 flex items-center justify-center rounded-full bg-[var(--brand-primary)] text-white">
+                    <div className="mt-1 h-10 w-10 flex items-center justify-center rounded-full bg-orange-100 text-orange-600">
                       ✓
                     </div>
                     <div>
@@ -49,7 +49,7 @@ export default function Intro() {
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <div className="mt-1 h-10 w-10 flex items-center justify-center rounded-full bg-[var(--brand-primary)] text-white">
+                    <div className="mt-1 h-10 w-10 flex items-center justify-center rounded-full bg-orange-100 text-orange-600">
                       ✓
                     </div>
                     <div>
@@ -58,7 +58,7 @@ export default function Intro() {
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <div className="mt-1 h-10 w-10 flex items-center justify-center rounded-full bg-[var(--brand-primary)] text-white">
+                    <div className="mt-1 h-10 w-10 flex items-center justify-center rounded-full bg-orange-100 text-orange-600">
                       ✓
                     </div>
                     <div>
@@ -68,7 +68,7 @@ export default function Intro() {
                   </div>
                 </div>
 
-                <button className="mt-10 inline-flex items-center justify-center rounded-full bg-[var(--brand-primary)] px-8 py-4 text-sm font-semibold text-white transition hover:bg-slate-900">
+                <button className="mt-10 inline-flex items-center justify-center rounded-full bg-[var(--text-gray)] px-8 py-4 text-sm font-semibold text-white transition hover:bg-slate-900">
                   Discover Our Story
                 </button>
               </div>

@@ -2,12 +2,12 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="w-full bg-[#fffaf4] pt-12 pb-8">
+    <footer className="w-full pt-12 pb-8">
       <div className="container mx-auto px-8 md:px-12 lg:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Column 1: About Perry Cleans */}
           <div className="flex flex-col space-y-4">
-            <h3 className="text-lg font-semibold text-orange-700">About Perry Cleans</h3>
+            <h3 className="text-lg font-semibold text-[var(--brand-primary)]">About Perry Cleans</h3>
             <p className="text-gray-600 max-w-xs">
               Perry Cleans provides professional residential and commercial cleaning with a focus on reliability,
               eco-friendly products, and exceptional customer service. We make spaces shine so you can focus on what
@@ -88,7 +88,7 @@ export function Footer() {
 
           {/* Column 2: Services */}
           <div className="flex flex-col space-y-4">
-            <h3 className="text-lg font-semibold text-orange-700">Services</h3>
+            <h3 className="text-lg font-semibold text-[var(--brand-primary)]">Services</h3>
             <nav className="flex flex-col space-y-2">
               <Link href="/services" className="text-gray-600 hover:text-orange-600 transition-colors">
                 Residential Cleaning
@@ -110,7 +110,7 @@ export function Footer() {
 
           {/* Column 3: Get Started */}
           <div className="flex flex-col space-y-4">
-            <h3 className="text-lg font-semibold text-orange-700">Get Started</h3>
+            <h3 className="text-lg font-semibold text-[var(--brand-primary)]">Get Started</h3>
             <nav className="flex flex-col space-y-2">
               <Link href="/careers" className="text-gray-600 hover:text-orange-600 transition-colors">
                 Careers
@@ -132,7 +132,7 @@ export function Footer() {
 
           {/* Column 4: About */}
           <div className="flex flex-col space-y-4">
-            <h3 className="text-lg font-semibold text-orange-700">About</h3>
+            <h3 className="text-lg font-semibold text-[var(--brand-primary)]">About</h3>
             <nav className="flex flex-col space-y-2">
               <Link href="/about" className="text-gray-600 hover:text-orange-600 transition-colors">
                 About Us
