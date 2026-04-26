@@ -79,7 +79,7 @@ export default function Blogs() {
                   <div className="mt-4">
                     <a
                       href={p.href}
-                      className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--brand-primary)] text-white text-sm hover:brightness-95 transition"
+                      className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--brand-primary)] text-white text-sm hover:bg-slate-900 transition"
                     >
                       Read more →
                     </a>

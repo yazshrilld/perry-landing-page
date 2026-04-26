@@ -19,10 +19,10 @@ export default function CTA() {
           <div className="mt-8 flex justify-center gap-4">
             <BookingComingSoonModal>
               <button type="button" className="px-6 py-3 rounded-full bg-slate-900 text-white shadow-md hover:shadow-lg transition">
-                Book Your Cleaning Now
+                Book Your Clean Now
               </button>
             </BookingComingSoonModal>
-            <button className="px-6 py-3 rounded-full bg-white text-orange-600 font-semibold border border-white/30 hover:bg-white/90 transition">
+            <button className="px-6 py-3 rounded-full bg-white text-slate-900 font-semibold border border-white/30 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition">
               Get a Free Quote
             </button>
           </div>

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import img1 from "./assets/imgs/info-landing-image-1.png";
 import img2 from "./assets/imgs/info-landing-image-2.png";
 import img3 from "./assets/imgs/pending-info-clean-1.png";
@@ -68,9 +69,12 @@ export default function Intro() {
                   </div>
                 </div>
 
-                <button className="mt-10 inline-flex items-center justify-center rounded-full bg-[var(--brand-primary)] px-8 py-4 text-sm font-semibold text-white transition hover:bg-slate-900">
+                <Link
+                  href="/about"
+                  className="mt-10 inline-flex items-center justify-center rounded-full bg-[var(--brand-primary)] px-8 py-4 text-sm font-semibold text-white transition hover:bg-slate-900"
+                >
                   Discover Our Story
-                </button>
+                </Link>
               </div>
 
               <div className="lg:col-span-6 flex items-start">

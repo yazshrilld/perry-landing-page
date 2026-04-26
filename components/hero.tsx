@@ -19,8 +19,8 @@ export default function Hero() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
-    { label: "Service", href: "#" },
-    { label: "Resource", href: "#" },
+    { label: "Service", href: "/services" },
+    { label: "Resource", href: "/resources" },
   ];
 
   const isActive = (href: string) => href !== "#" && pathname === href;
@@ -91,9 +91,9 @@ export default function Hero() {
                 ))}
               </div>
               <div className="hidden lg:block">
-                <button className="px-4 py-2 rounded-full bg-[var(--brand-primary)] text-white hover:bg-[var(--brand-primary-dark)] transition">
+                <Link href="/contact" className="px-4 py-2 rounded-full bg-[var(--brand-primary)] text-white hover:bg-[var(--brand-primary-dark)] transition">
                   Talk to Us
-                </button>
+                </Link>
               </div>
               <button
                 className="lg:hidden text-white p-2"
@@ -173,12 +173,13 @@ export default function Hero() {
                   ))}
                 </div>
 
-                <button
-                  type="button"
-                  className="mt-6 w-full px-4 py-2.5 rounded-full bg-[var(--brand-primary)] text-white hover:bg-[var(--brand-primary-dark)] transition"
+                <Link
+                  href="/contact"
+                  onClick={() => setMenuOpen(false)}
+                  className="mt-6 block text-center w-full px-4 py-2.5 rounded-full bg-[var(--brand-primary)] text-white hover:bg-[var(--brand-primary-dark)] transition"
                 >
                   Talk to Us
-                </button>
+                </Link>
               </div>
             </aside>
           </div>
@@ -194,7 +195,10 @@ export default function Hero() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <BookingComingSoonModal>
-                  <button type="button" className="px-6 py-3 rounded-full bg-[var(--brand-primary)] text-white">
+                  <button
+                    type="button"
+                    className="px-6 py-3 rounded-full bg-[var(--brand-primary)] text-white hover:bg-slate-900 transition"
+                  >
                     Book a Cleaner
                   </button>
                 </BookingComingSoonModal>

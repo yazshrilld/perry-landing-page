@@ -39,7 +39,7 @@ export function BookingComingSoonModal({ children }: BookingComingSoonModalProps
             <DialogClose asChild>
               <button
                 type="button"
-                className="w-full sm:w-auto px-5 py-2.5 rounded-full bg-[var(--brand-primary)] text-white hover:bg-[var(--brand-primary-dark)] transition"
+                className="w-full sm:w-auto px-5 py-2.5 rounded-full bg-[var(--brand-primary)] text-white hover:bg-slate-900 transition"
               >
                 Got it
               </button>
