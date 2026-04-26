@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { BookingComingSoonModal } from "./booking-coming-soon-modal";
 
 export default function CTA() {
   return (
@@ -16,9 +17,11 @@ export default function CTA() {
           </p>
 
           <div className="mt-8 flex justify-center gap-4">
-            <button className="px-6 py-3 rounded-full bg-slate-900 text-white shadow-md hover:shadow-lg transition">
-              Book Your Clean Now
-            </button>
+            <BookingComingSoonModal>
+              <button type="button" className="px-6 py-3 rounded-full bg-slate-900 text-white shadow-md hover:shadow-lg transition">
+                Book Your Cleaning Now
+              </button>
+            </BookingComingSoonModal>
             <button className="px-6 py-3 rounded-full bg-white text-orange-600 font-semibold border border-white/30 hover:bg-white/90 transition">
               Get a Free Quote
             </button>

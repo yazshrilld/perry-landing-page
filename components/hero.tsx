@@ -1,22 +1,43 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import slide1 from "./assets/imgs/hero-home-clean-1.jpg";
 import slide2 from "./assets/imgs/hero-office-clean-2.webp";
 import slide3 from "./assets/imgs/hero-event-clean-2.jpg";
 import logo from "./assets/imgs/perry-logo-1.png";
+import { BookingComingSoonModal } from "./booking-coming-soon-modal";
 
 export default function Hero() {
   const slides = [slide1, slide2, slide3];
   const [index, setIndex] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Service", href: "#" },
+    { label: "Resource", href: "#" },
+  ];
+
+  const isActive = (href: string) => href !== "#" && pathname === href;
 
   useEffect(() => {
     const t = setInterval(() => setIndex((i) => (i + 1) % slides.length), 5000);
     return () => clearInterval(t);
   }, [slides.length]);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [menuOpen]);
 
   return (
     <header className="w-full relative">
@@ -40,9 +61,9 @@ export default function Hero() {
         ))}
 
         <div className="absolute inset-0 z-20 flex flex-col">
-          <nav className="flex items-center px-16 py-5 lg:py-6">
+          <nav className="flex items-center px-6 md:px-12 lg:px-16 py-5 lg:py-6">
             <div className="flex items-center gap-4">
-              <a href="#" className="inline-flex items-center">
+              <a href="#top" className="inline-flex items-center">
                 <Image
                   src={logo}
                   alt="Perry Cleaning Services"
@@ -54,27 +75,28 @@ export default function Hero() {
             </div>
 
             <div className="ml-auto flex items-center gap-4">
-              <div className="hidden md:flex items-center gap-6 text-white/90">
-                <a href="#" className="hover:text-white">
-                  Home
-                </a>
-                <a href="#" className="hover:text-white">
-                  About
-                </a>
-                <a href="#" className="hover:text-white">
-                  Service
-                </a>
-                <a href="#" className="hover:text-white">
-                  Resource
-                </a>
+              <div className="hidden lg:flex items-center gap-6 text-white/90">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className={`border-b-2 pb-1 transition-colors ${
+                      isActive(link.href)
+                        ? "text-white border-[var(--brand-primary)] font-semibold"
+                        : "text-white/85 border-transparent hover:text-white hover:border-white/70"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
               </div>
-              <div className="hidden md:block">
-                <button className="px-4 py-2 rounded-full bg-[var(--brand-primary)] text-white hover:bg-[var(--brand-primary-dark)]">
+              <div className="hidden lg:block">
+                <button className="px-4 py-2 rounded-full bg-[var(--brand-primary)] text-white hover:bg-[var(--brand-primary-dark)] transition">
                   Talk to Us
                 </button>
               </div>
               <button
-                className="md:hidden text-white p-2"
+                className="lg:hidden text-white p-2"
                 onClick={() => setMenuOpen((v) => !v)}
                 aria-label="toggle menu"
               >
@@ -95,16 +117,71 @@ export default function Hero() {
             </div>
           </nav>
 
-          {menuOpen && (
-            <div className="md:hidden bg-black/40 p-4">
-              <div className="flex flex-col gap-3 text-white">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Service</a>
-                <a href="#">Resource</a>
+          <div
+            className={`fixed inset-0 z-40 lg:hidden transition-opacity duration-300 ${
+              menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+            }`}
+            aria-hidden={!menuOpen}
+          >
+            <button
+              type="button"
+              className="absolute inset-0 bg-black/45 backdrop-blur-[1px]"
+              onClick={() => setMenuOpen(false)}
+              aria-label="Close menu"
+            />
+
+            <aside
+              className={`absolute left-0 top-0 h-full w-[82%] max-w-xs bg-[var(--background-offwhite)] border-r border-[var(--ui-light-gray)] shadow-2xl transform transition-transform duration-300 ease-in-out ${
+                menuOpen ? "translate-x-0" : "-translate-x-full"
+              }`}
+            >
+              <div className="flex items-center justify-between px-5 py-4 border-b border-[var(--ui-light-gray)]">
+                <Image
+                  src={logo}
+                  alt="Perry Cleaning Services"
+                  width={54}
+                  height={24}
+                  className="object-contain mix-blend-multiply rounded-[50%]"
+                />
+                <button
+                  type="button"
+                  onClick={() => setMenuOpen(false)}
+                  className="p-2 rounded-md text-[var(--brand-charcoal)] hover:bg-black/5 transition"
+                  aria-label="Close menu"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
               </div>
-            </div>
-          )}
+
+              <div className="px-4 py-5">
+                <div className="flex flex-col gap-2">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.label}
+                      href={link.href}
+                      onClick={() => setMenuOpen(false)}
+                      className={`rounded-md px-3 py-2.5 transition-colors ${
+                        isActive(link.href)
+                          ? "bg-[var(--brand-primary)]/15 text-[var(--brand-charcoal)] font-semibold"
+                          : "text-[var(--brand-charcoal)] hover:bg-black/5"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+
+                <button
+                  type="button"
+                  className="mt-6 w-full px-4 py-2.5 rounded-full bg-[var(--brand-primary)] text-white hover:bg-[var(--brand-primary-dark)] transition"
+                >
+                  Talk to Us
+                </button>
+              </div>
+            </aside>
+          </div>
 
           <div className="flex-1 flex items-center">
             <div className="max-w-3xl px-6 md:px-12 lg:px-20">
@@ -116,7 +193,11 @@ export default function Hero() {
                 Quality cleaning services for homes, offices, and events — trusted professionals, exceptional results.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <button className="px-6 py-3 rounded-full bg-[var(--brand-primary)] text-white">Book a Cleaner</button>
+                <BookingComingSoonModal>
+                  <button type="button" className="px-6 py-3 rounded-full bg-[var(--brand-primary)] text-white">
+                    Book a Cleaner
+                  </button>
+                </BookingComingSoonModal>
                 <button className="px-6 py-3 rounded-full border border-white/30 text-white bg-white/5">
                   Learn More
                 </button>

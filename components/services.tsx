@@ -111,7 +111,15 @@ function ServiceCard({ service }: { service: Service }) {
   );
 }
 
-export default function Services() {
+type ServicesProps = {
+  sectionLabel?: string;
+  sectionHeading?: string;
+};
+
+export default function Services({
+  sectionLabel = "Our Services",
+  sectionHeading = "Cleaning services built for every need",
+}: ServicesProps) {
   const services: Service[] = [
     {
       id: 1,
@@ -155,9 +163,9 @@ export default function Services() {
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
-            <p className="text-sm text-[var(--text-gray)]">Our Services</p>
+            <p className="text-sm text-[var(--text-gray)]">{sectionLabel}</p>
             <h2 className="text-2xl md:text-3xl font-bold text-[var(--brand-charcoal)] mt-2">
-              Cleaning services built for every need
+              {sectionHeading}
             </h2>
           </div>
 
