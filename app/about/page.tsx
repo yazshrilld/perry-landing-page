@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import logo from "@/components/assets/imgs/perry-logo-1.png";
+import logo from "@/components/assets/imgs/PERRY2.png";
 import heroBg from "@/components/assets/imgs/hero-home-clean-1.jpg";
 import teamImageOne from "@/components/assets/imgs/group-cleaners-1.webp";
 import teamImageTwo from "@/components/assets/imgs/group-cleaners-2.avif";
@@ -22,8 +22,8 @@ export default function AboutPage() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
-    { label: "Service", href: "/services" },
-    { label: "Resource", href: "/resources" },
+    { label: "Services", href: "/services" },
+    { label: "Resources", href: "/resources" },
   ];
 
   const isActive = (href: string) => href !== "#" && pathname === href;
@@ -103,9 +103,9 @@ export default function AboutPage() {
                   <Image
                     src={logo}
                     alt="Perry Cleaning Services"
-                    width={60}
-                    height={26}
-                    className="object-contain mix-blend-multiply rounded-[50%]"
+                    width={140}
+                  height={140}
+                    className="w-[88px] md:w-[104px] lg:w-[118px] h-auto object-contain mix-blend-multiply rounded-[50%]"
                   />
                 </a>
               </div>
@@ -175,8 +175,8 @@ export default function AboutPage() {
                   <Image
                     src={logo}
                     alt="Perry Cleaning Services"
-                    width={54}
-                    height={24}
+                    width={72}
+                    height={72}
                     className="object-contain mix-blend-multiply rounded-[50%]"
                   />
                   <button

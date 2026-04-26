@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import slide1 from "./assets/imgs/hero-home-clean-1.jpg";
 import slide2 from "./assets/imgs/hero-office-clean-2.webp";
 import slide3 from "./assets/imgs/hero-event-clean-2.jpg";
-import logo from "./assets/imgs/perry-logo-1.png";
+import logo from "./assets/imgs/PERRY2.png";
 import { BookingComingSoonModal } from "./booking-coming-soon-modal";
 
 export default function Hero() {
@@ -19,8 +19,8 @@ export default function Hero() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
-    { label: "Service", href: "/services" },
-    { label: "Resource", href: "/resources" },
+    { label: "Services", href: "/services" },
+    { label: "Resources", href: "/resources" },
   ];
 
   const isActive = (href: string) => href !== "#" && pathname === href;
@@ -67,9 +67,9 @@ export default function Hero() {
                 <Image
                   src={logo}
                   alt="Perry Cleaning Services"
-                  width={60}
-                  height={26}
-                  className="object-contain mix-blend-multiply rounded-[50%]"
+                  width={140}
+                  height={140}
+                  className="w-[88px] md:w-[104px] lg:w-[118px] h-auto object-contain mix-blend-multiply rounded-[50%]"
                 />
               </a>
             </div>
@@ -139,8 +139,8 @@ export default function Hero() {
                 <Image
                   src={logo}
                   alt="Perry Cleaning Services"
-                  width={54}
-                  height={24}
+                  width={72}
+                  height={72}
                   className="object-contain mix-blend-multiply rounded-[50%]"
                 />
                 <button
@@ -190,9 +190,9 @@ export default function Hero() {
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">
                 Cleaning That Lets You Breathe Easy.
               </h1>
-              <p className="text-lg text-white/90 mb-6">
+              {/* <p className="text-lg text-white/90 mb-6">
                 Quality cleaning services for homes, offices, and events — trusted professionals, exceptional results.
-              </p>
+              </p> */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <BookingComingSoonModal>
                   <button

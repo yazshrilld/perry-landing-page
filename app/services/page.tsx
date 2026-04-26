@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-import logo from "@/components/assets/imgs/perry-logo-1.png";
+import logo from "@/components/assets/imgs/PERRY2.png";
 import heroBg from "@/components/assets/imgs/hero-office-clean-1.jpg";
 import serviceImg1 from "@/components/assets/imgs/hero-home-clean-3.jpg";
 import serviceImg2 from "@/components/assets/imgs/hero-office-clean-1.jpg";
@@ -119,8 +119,8 @@ export default function ServicesPage() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
-    { label: "Service", href: "/services" },
-    { label: "Resource", href: "/resources" },
+    { label: "Services", href: "/services" },
+    { label: "Resources", href: "/resources" },
   ];
 
   const isActive = (href: string) => href !== "#" && pathname === href;
@@ -148,9 +148,9 @@ export default function ServicesPage() {
                   <Image
                     src={logo}
                     alt="Perry Cleaning Services"
-                    width={60}
-                    height={26}
-                    className="object-contain mix-blend-multiply rounded-[50%]"
+                    width={140}
+                  height={140}
+                    className="w-[88px] md:w-[104px] lg:w-[118px] h-auto object-contain mix-blend-multiply rounded-[50%]"
                   />
                 </a>
               </div>
@@ -214,8 +214,8 @@ export default function ServicesPage() {
                   <Image
                     src={logo}
                     alt="Perry Cleaning Services"
-                    width={54}
-                    height={24}
+                    width={72}
+                    height={72}
                     className="object-contain mix-blend-multiply rounded-[50%]"
                   />
                   <button
@@ -263,10 +263,10 @@ export default function ServicesPage() {
               <div className="max-w-3xl px-6 md:px-12 lg:px-20">
                 <p className="text-sm text-white/80 mb-2 uppercase tracking-[0.2em]">Our Services</p>
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">Professional Cleaning Services</h1>
-                <p className="text-base md:text-lg text-white/90 mb-6">
+                {/* <p className="text-base md:text-lg text-white/90 mb-6">
                   Reliable cleaning solutions for homes, offices, events, and industrial spaces delivered by trained
                   professionals.
-                </p>
+                </p> */}
                 <div className="flex flex-col sm:flex-row gap-3 sm:items-center">
                   <BookingComingSoonModal>
                     <button

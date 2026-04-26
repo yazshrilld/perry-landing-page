@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import logo1 from "./assets/imgs/perry-logo-1.png";
+import logo1 from "./assets/imgs/PERRY2.png";
 import logo2 from "./assets/imgs/perry-logo-2.png";
 import { IconBroom, IconBuilding, IconSpray, IconMop, IconEvent } from "./services";
 
@@ -73,8 +73,8 @@ export default function Partners() {
                             <Image
                               src={p.src}
                               alt={p.alt}
-                              width={64}
-                              height={32}
+                              width={72}
+                              height={72}
                               className="object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition duration-300"
                             />
                           </div>
