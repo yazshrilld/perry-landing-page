@@ -318,7 +318,7 @@ export default function ServicesPage() {
               </h2>
             </div>
             <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-              <article className="rounded-lg border border-[var(--ui-light-gray)] p-5 bg-[var(--background-offwhite)]">
+              {/* <article className="rounded-lg border border-[var(--ui-light-gray)] p-5 bg-[var(--background-offwhite)]">
                 <p className="text-sm uppercase tracking-[0.14em] text-[var(--text-gray)]">
                   Starting Price
                 </p>
@@ -328,7 +328,7 @@ export default function ServicesPage() {
                 <p className="mt-2 text-sm text-[var(--text-gray)]">
                   Base price varies by service type and property details.
                 </p>
-              </article>
+              </article> */}
               <article className="rounded-lg border border-[var(--ui-light-gray)] p-5 bg-[var(--background-offwhite)]">
                 <p className="text-sm uppercase tracking-[0.14em] text-[var(--text-gray)]">
                   Custom Quote
