@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   title: "Perry Cleaning Services - Your trusted cleaning partner",
   description: "Professional cleaning services for homes and businesses. Reliable, efficient, and eco-friendly solutions tailored to your needs.",
   generator: "v0.dev",
+  icons: {
+    icon: "/favicon-dark.svg?v=3",
+    shortcut: "/favicon-dark.svg?v=3",
+    apple: "/apple-touch-icon.png",
+  },
 }
 
 export default function RootLayout({
