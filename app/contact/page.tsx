@@ -66,7 +66,15 @@ export default function ContactPage() {
     <main id="top" className="min-h-screen landing-bg">
       <header className="w-full relative">
         <div className="w-full h-[620px] sm:h-[580px] md:h-[520px] relative overflow-hidden">
-          <Image src={heroBg} alt="Contact Perry Cleans" fill sizes="100vw" quality={70} className="object-cover" priority />
+          <Image
+            src={heroBg}
+            alt="Contact Perry Cleans"
+            fill
+            sizes="100vw"
+            quality={70}
+            className="object-cover"
+            priority
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/30 to-black/55" />
 
           <div className="absolute inset-0 z-20 flex flex-col">
@@ -77,7 +85,7 @@ export default function ContactPage() {
                     src={logo}
                     alt="Perry Cleaning Services"
                     width={140}
-                  height={140}
+                    height={140}
                     className="w-[88px] md:w-[104px] lg:w-[118px] h-auto object-contain mix-blend-multiply rounded-[50%]"
                   />
                 </a>
@@ -112,11 +120,27 @@ export default function ContactPage() {
                   onClick={() => setMenuOpen((v) => !v)}
                   aria-label="toggle menu"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
                     {menuOpen ? (
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
                     ) : (
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4 6h16M4 12h16M4 18h16"
+                      />
                     )}
                   </svg>
                 </button>
@@ -125,7 +149,9 @@ export default function ContactPage() {
 
             <div
               className={`fixed inset-0 z-40 lg:hidden transition-opacity duration-300 ${
-                menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                menuOpen
+                  ? "opacity-100 pointer-events-auto"
+                  : "opacity-0 pointer-events-none"
               }`}
               aria-hidden={!menuOpen}
             >
@@ -155,8 +181,19 @@ export default function ContactPage() {
                     className="p-2 rounded-md text-[var(--brand-charcoal)] hover:bg-black/5 transition"
                     aria-label="Close menu"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
                     </svg>
                   </button>
                 </div>
@@ -192,10 +229,15 @@ export default function ContactPage() {
 
             <div className="flex-1 flex items-center">
               <div className="max-w-3xl px-6 md:px-12 lg:px-20">
-                <p className="text-sm text-white/80 mb-2 uppercase tracking-[0.2em]">Contact</p>
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">Talk to Us</h1>
+                <p className="text-sm text-white/80 mb-2 uppercase tracking-[0.2em]">
+                  Contact
+                </p>
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">
+                  Talk to Us
+                </h1>
                 <p className="text-base md:text-lg text-white/90 mb-6">
-                  Reach out for bookings, service inquiries, partnerships, or support. Our team is ready to help.
+                  Reach out for bookings, service inquiries, partnerships, or
+                  support. Our team is ready to help.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 sm:items-center">
                   <a
@@ -225,9 +267,16 @@ export default function ContactPage() {
               { title: "Email", text: "hello@perrycleans.com" },
               { title: "Working Hours", text: "Mon - Sat, 8:00 AM - 6:00 PM" },
             ].map((item) => (
-              <article key={item.title} className="rounded-xl bg-white border border-[var(--ui-light-gray)] p-5 shadow-sm">
-                <p className="text-sm uppercase tracking-[0.12em] text-[var(--text-gray)]">{item.title}</p>
-                <p className="mt-2 text-lg font-semibold text-[var(--brand-charcoal)]">{item.text}</p>
+              <article
+                key={item.title}
+                className="rounded-xl bg-white border border-[var(--ui-light-gray)] p-5 shadow-sm"
+              >
+                <p className="text-sm uppercase tracking-[0.12em] text-[var(--text-gray)]">
+                  {item.title}
+                </p>
+                <p className="mt-2 text-lg font-semibold text-[var(--brand-charcoal)]">
+                  {item.text}
+                </p>
               </article>
             ))}
           </div>
@@ -238,21 +287,29 @@ export default function ContactPage() {
         <div className="container mx-auto px-6 md:px-12 lg:px-16">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6">
             <article className="lg:col-span-7 rounded-xl bg-white border border-[var(--ui-light-gray)] p-6 md:p-8 shadow-sm">
-              <h2 className="text-3xl font-bold text-[var(--brand-charcoal)]">Send us a message</h2>
-              <p className="mt-2 text-[var(--text-gray)]">Tell us what you need and we’ll get back to you shortly.</p>
+              <h2 className="text-3xl font-bold text-[var(--brand-charcoal)]">
+                Send us a message
+              </h2>
+              <p className="mt-2 text-[var(--text-gray)]">
+                Tell us what you need and we’ll get back to you shortly.
+              </p>
 
               <form onSubmit={handleSubmit} className="mt-6 space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <input
                     value={form.fullName}
-                    onChange={(e) => setForm((p) => ({ ...p, fullName: e.target.value }))}
+                    onChange={(e) =>
+                      setForm((p) => ({ ...p, fullName: e.target.value }))
+                    }
                     placeholder="Full Name"
                     className="h-11 w-full rounded-md border border-[var(--ui-light-gray)] px-3"
                   />
                   <input
                     type="email"
                     value={form.email}
-                    onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))}
+                    onChange={(e) =>
+                      setForm((p) => ({ ...p, email: e.target.value }))
+                    }
                     placeholder="Email Address"
                     className="h-11 w-full rounded-md border border-[var(--ui-light-gray)] px-3"
                   />
@@ -260,13 +317,17 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <input
                     value={form.phone}
-                    onChange={(e) => setForm((p) => ({ ...p, phone: e.target.value }))}
+                    onChange={(e) =>
+                      setForm((p) => ({ ...p, phone: e.target.value }))
+                    }
                     placeholder="Phone Number"
                     className="h-11 w-full rounded-md border border-[var(--ui-light-gray)] px-3"
                   />
                   <select
                     value={form.inquiryType}
-                    onChange={(e) => setForm((p) => ({ ...p, inquiryType: e.target.value }))}
+                    onChange={(e) =>
+                      setForm((p) => ({ ...p, inquiryType: e.target.value }))
+                    }
                     className="h-11 w-full rounded-md border border-[var(--ui-light-gray)] px-3 bg-white"
                   >
                     <option>General Inquiry</option>
@@ -277,13 +338,21 @@ export default function ContactPage() {
                 </div>
                 <textarea
                   value={form.message}
-                  onChange={(e) => setForm((p) => ({ ...p, message: e.target.value }))}
+                  onChange={(e) =>
+                    setForm((p) => ({ ...p, message: e.target.value }))
+                  }
                   placeholder="Your Message"
                   className="min-h-[140px] w-full rounded-md border border-[var(--ui-light-gray)] px-3 py-2"
                 />
 
-                {formError && <p className="text-sm text-red-600">{formError}</p>}
-                {sent && <p className="text-sm text-emerald-700">Message sent successfully. We’ll contact you soon.</p>}
+                {formError && (
+                  <p className="text-sm text-red-600">{formError}</p>
+                )}
+                {sent && (
+                  <p className="text-sm text-emerald-700">
+                    Message sent successfully. We’ll contact you soon.
+                  </p>
+                )}
 
                 <button
                   type="submit"
@@ -295,17 +364,42 @@ export default function ContactPage() {
             </article>
 
             <article className="lg:col-span-5 rounded-xl bg-white border border-[var(--ui-light-gray)] p-6 md:p-8 shadow-sm">
-              <h2 className="text-2xl font-bold text-[var(--brand-charcoal)]">Direct Contact</h2>
-              <p className="mt-2 text-[var(--text-gray)]">Need a quick response? Use the direct channels below.</p>
+              <h2 className="text-2xl font-bold text-[var(--brand-charcoal)]">
+                Direct Contact
+              </h2>
+              <p className="mt-2 text-[var(--text-gray)]">
+                Need a quick response? Use the direct channels below.
+              </p>
               <div className="mt-5 space-y-3 text-[var(--text-gray)]">
-                <p><span className="font-semibold text-[var(--brand-charcoal)]">Phone:</span> 08032266625</p>
-                <p><span className="font-semibold text-[var(--brand-charcoal)]">Phone:</span> 07061889992</p>
-                <p><span className="font-semibold text-[var(--brand-charcoal)]">Email:</span> hello@perrycleans.com</p>
-                <p><span className="font-semibold text-[var(--brand-charcoal)]">Address:</span> Lagos, Nigeria</p>
+                <p>
+                  <span className="font-semibold text-[var(--brand-charcoal)]">
+                    Phone:
+                  </span>{" "}
+                  08032266625
+                </p>
+                <p>
+                  <span className="font-semibold text-[var(--brand-charcoal)]">
+                    Phone:
+                  </span>{" "}
+                  07061889992
+                </p>
+                <p>
+                  <span className="font-semibold text-[var(--brand-charcoal)]">
+                    Email:
+                  </span>{" "}
+                  hello@perrycleans.com
+                </p>
+                <p>
+                  <span className="font-semibold text-[var(--brand-charcoal)]">
+                    Address:
+                  </span>{" "}
+                  Lagos, Nigeria
+                </p>
               </div>
               <div className="mt-6 rounded-lg bg-[var(--background-offwhite)] border border-[var(--ui-light-gray)] p-4">
                 <p className="text-sm text-[var(--text-gray)]">
-                  We typically respond within 24 hours for inquiries and faster for active service customers.
+                  We typically respond within 24 hours for inquiries and faster
+                  for active service customers.
                 </p>
               </div>
             </article>
@@ -317,8 +411,12 @@ export default function ContactPage() {
         <div className="container mx-auto px-6 md:px-12 lg:px-16">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-8">
-              <p className="text-sm uppercase tracking-[0.2em] text-[var(--text-gray)]">FAQ</p>
-              <h2 className="mt-2 text-3xl md:text-4xl font-bold text-[var(--brand-charcoal)]">Common contact questions</h2>
+              <p className="text-sm uppercase tracking-[0.2em] text-[var(--text-gray)]">
+                FAQ
+              </p>
+              <h2 className="mt-2 text-3xl md:text-4xl font-bold text-[var(--brand-charcoal)]">
+                Common contact questions
+              </h2>
             </div>
             <div className="space-y-4">
               {[
@@ -335,8 +433,13 @@ export default function ContactPage() {
                   a: "Absolutely. We handle residential, office, events, and custom operational cleaning requests.",
                 },
               ].map((item) => (
-                <article key={item.q} className="rounded-xl bg-white border border-[var(--ui-light-gray)] p-5 shadow-sm">
-                  <h3 className="text-lg font-semibold text-[var(--brand-charcoal)]">{item.q}</h3>
+                <article
+                  key={item.q}
+                  className="rounded-xl bg-white border border-[var(--ui-light-gray)] p-5 shadow-sm"
+                >
+                  <h3 className="text-lg font-semibold text-[var(--brand-charcoal)]">
+                    {item.q}
+                  </h3>
                   <p className="mt-2 text-[var(--text-gray)]">{item.a}</p>
                 </article>
               ))}
@@ -348,9 +451,12 @@ export default function ContactPage() {
       <section className="w-full bg-[var(--brand-primary)] py-16">
         <div className="container mx-auto px-6 md:px-12 lg:px-16">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">Ready to work with Perry Cleans?</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+              Ready to work with Perry Cleans?
+            </h2>
             <p className="mt-4 text-white/95">
-              Let’s discuss your cleaning needs and create a plan that works for your space and schedule.
+              Let’s discuss your cleaning needs and create a plan that works for
+              your space and schedule.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <BookingComingSoonModal>

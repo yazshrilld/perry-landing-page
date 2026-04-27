@@ -63,14 +63,19 @@ export default function Hero() {
         <div className="absolute inset-0 z-20 flex flex-col">
           <nav className="flex items-center px-6 md:px-12 lg:px-16 py-5 lg:py-6">
             <div className="flex items-center gap-4">
-              <a href="#top" className="inline-flex items-center">
-                <Image
-                  src={logo}
-                  alt="Perry Cleaning Services"
-                  width={140}
-                  height={140}
-                  className="w-[88px] md:w-[104px] lg:w-[118px] h-auto object-contain mix-blend-multiply rounded-[50%]"
-                />
+              <a href="#top" className="inline-flex flex-col items-start md:flex-row md:items-center">
+                <div className="relative w-[88px] h-[42px] md:w-[104px] md:h-[50px] lg:w-[118px] lg:h-[56px] overflow-hidden">
+                  <Image
+                    src={logo}
+                    alt="Perry Cleaning Services"
+                    width={140}
+                    height={140}
+                    className="w-[132%] max-w-none h-auto object-contain object-left mix-blend-multiply -translate-x-[16%] -translate-y-[16%]"
+                  />
+                </div>
+                <span className="mt-0.5 text-white font-semibold text-sm md:text-base lg:text-lg whitespace-nowrap leading-none md:mt-0 md:-ml-4 md:-translate-y-[2px]">
+                  PerryCleaningServices
+                </span>
               </a>
             </div>
 
@@ -91,12 +96,17 @@ export default function Hero() {
                 ))}
               </div>
               <div className="hidden lg:block">
-                <Link href="/contact" className="px-4 py-2 rounded-full bg-[var(--brand-primary)] text-white hover:bg-[var(--brand-primary-dark)] transition">
+                <Link
+                  href="/contact"
+                  className="px-4 py-2 rounded-full bg-[var(--brand-primary)] text-white hover:bg-[var(--brand-primary-dark)] transition"
+                >
                   Talk to Us
                 </Link>
               </div>
               <button
-                className="lg:hidden text-white p-2"
+                className={`lg:hidden text-white p-2 transition-opacity ${
+                  menuOpen ? "opacity-0 pointer-events-none" : "opacity-100"
+                }`}
                 onClick={() => setMenuOpen((v) => !v)}
                 aria-label="toggle menu"
               >
@@ -108,9 +118,19 @@ export default function Hero() {
                   stroke="currentColor"
                 >
                   {menuOpen ? (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
                   ) : (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
                   )}
                 </svg>
               </button>
@@ -119,7 +139,9 @@ export default function Hero() {
 
           <div
             className={`fixed inset-0 z-40 lg:hidden transition-opacity duration-300 ${
-              menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+              menuOpen
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
             }`}
             aria-hidden={!menuOpen}
           >
@@ -136,21 +158,43 @@ export default function Hero() {
               }`}
             >
               <div className="flex items-center justify-between px-5 py-4 border-b border-[var(--ui-light-gray)]">
-                <Image
-                  src={logo}
-                  alt="Perry Cleaning Services"
-                  width={72}
-                  height={72}
-                  className="object-contain mix-blend-multiply rounded-[50%]"
-                />
+                <div className="inline-flex flex-col items-start md:flex-row md:items-center">
+                  <div className="relative w-[72px] h-[34px] overflow-hidden">
+                    <Image
+                      src={logo}
+                      alt="Perry Cleaning Services"
+                      width={72}
+                      height={72}
+                      className="w-[132%] max-w-none h-auto object-contain object-left -translate-x-[16%] -translate-y-[15%]"
+                      style={{
+                        filter:
+                          "drop-shadow(0 0 1px rgba(0,0,0,0.9)) drop-shadow(0 1px 1px rgba(0,0,0,0.35))",
+                      }}
+                    />
+                  </div>
+                  <span className="mt-0.5 text-[var(--brand-charcoal)] font-semibold text-sm whitespace-nowrap leading-none md:mt-0 md:ml-1 md:-translate-y-[2px]">
+                    PerryCleaningServices
+                  </span>
+                </div>
                 <button
                   type="button"
                   onClick={() => setMenuOpen(false)}
                   className="p-2 rounded-md text-[var(--brand-charcoal)] hover:bg-black/5 transition"
                   aria-label="Close menu"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
                   </svg>
                 </button>
               </div>
@@ -186,7 +230,9 @@ export default function Hero() {
 
           <div className="flex-1 flex items-center">
             <div className="max-w-3xl px-6 md:px-12 lg:px-20">
-              <p className="text-sm text-white/80 mb-2">Your health, your family, our commitment to care.</p>
+              <p className="text-sm text-white/80 mb-2">
+                Your health, your family, our commitment to care.
+              </p>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">
                 Cleaning That Lets You Breathe Easy.
               </h1>
@@ -212,7 +258,13 @@ export default function Hero() {
 
         <div className="absolute bottom-6 right-6 z-30 hidden md:block">
           <div className="w-48 h-28 bg-white/90 rounded-lg overflow-hidden flex items-center justify-center">
-            <Image src={slide3} alt="thumbnail" width={180} height={100} className="object-cover" />
+            <Image
+              src={slide3}
+              alt="thumbnail"
+              width={180}
+              height={100}
+              className="object-cover"
+            />
           </div>
         </div>
       </div>

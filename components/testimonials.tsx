@@ -2,37 +2,31 @@
 
 import React from "react";
 import Image from "next/image";
-import avatarPlaceholder from "./assets/imgs/pending-info-clean-1.png";
+import testimonialAvatar1 from "./assets/imgs/testimonials/testimonials-1.jpeg";
+import testimonialAvatar2 from "./assets/imgs/testimonials/testimonials-2.jpeg";
+import testimonialAvatar3 from "./assets/imgs/testimonials/testimonials-3.jpeg";
 
 type Testimonial = {
   avatar: any;
   name: string;
-  location: string;
   text: string;
-  link?: string;
 };
 
 const testimonials: Testimonial[] = [
   {
-    avatar: avatarPlaceholder,
+    avatar: testimonialAvatar1,
     name: "Sofia Martinez",
-    location: "Lisbon, Portugal",
     text: "— The team delivered on time and exceeded our expectations. Communication was clear and the results speak for themselves.",
-    link: "#",
   },
   {
-    avatar: avatarPlaceholder,
+    avatar: testimonialAvatar2,
     name: "Daniel Okoye",
-    location: "Lagos, Nigeria",
     text: "— Professional, reliable and detail-oriented. Our office has never felt cleaner — our staff noticed the difference right away.",
-    link: "#",
   },
   {
-    avatar: avatarPlaceholder,
+    avatar: testimonialAvatar3,
     name: "Ava Thompson",
-    location: "Austin, USA",
     text: "— Excellent service and a thoughtful approach. The case study shows measurable improvements in our workplace wellbeing.",
-    link: "#",
   },
 ];
 
@@ -57,19 +51,12 @@ export default function Testimonials() {
                   </div>
                   <div>
                     <p className="font-semibold text-sm text-[var(--brand-charcoal)]">{t.name}</p>
-                    <p className="text-xs text-gray-500">{t.location}</p>
                   </div>
                 </div>
 
                 <div className="border-t border-gray-100 my-4" />
 
                 <p className="text-sm text-gray-700 leading-relaxed">{t.text}</p>
-
-                <div className="mt-6 flex items-end">
-                  <a href={t.link} className="text-sm text-gray-500 hover:underline">
-                    Read case study
-                  </a>
-                </div>
               </article>
             ))}
           </div>
