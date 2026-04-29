@@ -3,9 +3,9 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import img1 from "./assets/imgs/info-landing-image-1.png";
-import img2 from "./assets/imgs/info-landing-image-2.png";
-import img3 from "./assets/imgs/pending-info-clean-1.png";
+import img1 from "./assets/imgs/team/page-image-1.jpg";
+import img2 from "./assets/imgs/hero-home-clean-2.jpg";
+import img3 from "./assets/imgs/team/page-image-1.jpg";
 import img4 from "./assets/imgs/hero-home-clean-2.jpg";
 
 const slides = [
